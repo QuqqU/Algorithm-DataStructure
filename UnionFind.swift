@@ -30,9 +30,9 @@ struct UnionFind {
         self.size = Array(repeatElement(1, count: size))
     }
 
-    mutating func find(parentOf me:Int) -> Int {
+    mutating func find(parentOf me:Int) -> Int? {
         if me < 0 || count <= me {
-            return -1
+            return nil
         }
         if me == self.parent[me] {
             return me
@@ -41,9 +41,9 @@ struct UnionFind {
         return self.parent[me]
     }
     
-    @discardableResult mutating func merge(setOf a:Int, setOf b:Int) -> Bool {
+    @discardableResult mutating func merge(setOf a:Int, setOf b:Int) -> Bool? {
         if a < 0 || count <= a || b < 0 || count <= b {
-            return false
+            return nil
         }
         
         var a = find(parentOf: a)
