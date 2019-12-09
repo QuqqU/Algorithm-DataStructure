@@ -17,7 +17,7 @@ void f(const string& s) {
         for(int i = 0; i <= lim; i++) cnt[i] = 0;
         for(int i = 0; i < n; i++) cnt[g[min(i + t, n)]]++;
         for(int i = 1; i <= lim; i++) cnt[i] += cnt[i - 1];
-        for(int i = 0; i < n; i++) gg[--cnt[g[min(i + t, n)]]] = i;
+        for(int i = n - 1; i >= 0; i--) gg[--cnt[g[min(i + t, n)]]] = i;
         
         for(int i = 0; i <= lim; i++) cnt[i] = 0;
         for(int i = 0; i < n; i++) cnt[g[i]]++;
