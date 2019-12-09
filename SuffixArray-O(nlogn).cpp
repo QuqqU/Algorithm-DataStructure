@@ -8,7 +8,7 @@ void f(const string& s) {
     int n = s.size();
     if(n == 1) return;
     
-    int lim = max(256, n);
+    int lim = max(128, n);
     for(int i = 0; i < n; i++) sa[i] = i, g[i] = s[i];
 
 
