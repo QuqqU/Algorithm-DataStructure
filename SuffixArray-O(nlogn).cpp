@@ -1,3 +1,36 @@
+void f() {
+    int n = s.size();
+    if(n == 1) return;
+    
+    int lim = max(26, n);
+    for(int i = 0; i < n; i++) sa[i] = i, g[i] = s[i] - 'a' + 1;
+
+    for(int t = 1; t < n ; t <<= 1) {
+        for(int i = 0; i <= lim; i++) cnt[i] = 0;
+        for(int i = 0; i < n; i++) cnt[g[min(i + t, n)]]++;
+        for(int i = 1; i <= lim; i++) cnt[i] += cnt[i - 1];
+        for(int i = n - 1; i >=0; i--) tg[--cnt[g[min(i + t, n)]]] = i;
+        for(int i = 0; i <= lim; i++) cnt[i] = 0;
+        for(int i = 0; i < n; i++) cnt[g[i]]++;
+        for(int i = 1; i <= lim; i++) cnt[i] += cnt[i - 1];
+        for(int i = n - 1; i >=0; i--) sa[--cnt[g[tg[i]]]] = tg[i];
+        
+        auto cmp = [&](int i, int j) {
+            if(g[i] == g[j]) return g[i + t] < g[j + t];
+            return g[i] < g[j];
+        };
+        
+        tg[sa[0]] = 1;
+        for(int i = 1; i < n; i++) tg[sa[i]] = tg[sa[i - 1]] + cmp(sa[i - 1], sa[i]);
+        
+        swap(g, tg);
+        
+        if(g[n] == n) break;
+    }
+}
+
+//////////////////////////////////
+
 const int MAX = 500'005;
 
 
