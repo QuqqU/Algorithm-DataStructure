@@ -1,3 +1,5 @@
+//sa, lcp 0-based
+//g, tg - 1-based
 void f() {
     int n = s.size();
     if(n == 1) return;
