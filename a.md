@@ -3,7 +3,7 @@
 
 <img src="https://github.com/nayechan/SWM_MiniProject_2021/tree/master/source/donkey.jpg", width="40%"/>
 
-![임금님 귀는 당나귀 귀](https://github.com/nayechan/SWM_MiniProject_2021/tree/master/source/donkey.jpg){: height=400px width=500px}
+![임금님 귀는 당나귀 귀](https://github.com/QuqqU/Algorithm-DataStructure/blob/master/donkey.jpg){: height=400px width=500px}
 
 카카오워크 챗봇 "OOO"은 마음 속에 담아둔 미처 끄내지 못한 이야기, 어디서라도 한번 크게 소리질러 보고 싶은 이야기를 할 수 있게 합니다. "OOO"에서 소리 한 번 지르고 마음의 병을 던지세요!
 
