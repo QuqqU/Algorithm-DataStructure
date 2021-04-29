@@ -1,7 +1,7 @@
 # SW Maestro 12 Mini Project
 ## Team. 임금님 귀는 당나귀 귀
 
-<img src="(https://github.com/nayechan/SWM_MiniProject_2021/tree/master/source/donkey.jpg", width="1000">
+<img src="https://github.com/nayechan/SWM_MiniProject_2021/tree/master/source/donkey.jpg", width="1000">
 
 ![임금님 귀는 당나귀 귀](https://github.com/nayechan/SWM_MiniProject_2021/tree/master/source/donkey.jpg){: width="400" height="300"}{: .center}
 
